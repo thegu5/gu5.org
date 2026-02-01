@@ -1,16 +1,28 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
+import PostMeta from "../components/PostMeta.astro";
 
 const posts = await getCollection("blog");
 // idk
 // posts.sort((a, b) => b.data.pubDate - a.data.pubDate)
 ---
+
 <Layout title="blog">
     {
-        posts.map(post => (<article class="border">
-           <h1 class="font-medium text-xl"><a href={`/blog/${post.slug}`} class="hover:underline">{post.data.title}</a></h1>
-           <p>{post.data.description}</p>
-        </article>))
+        posts.map((post) => (
+            <article class="border py-5 px-6 space-y-1">
+                <h1 class="font-medium text-xl">
+                    <a href={`/blog/${post.slug}`} class="hover:underline">
+                        {post.data.title}
+                    </a>
+                </h1>
+                <p>{post.data.description}</p>
+                <PostMeta
+                    pubDate={post.data.pubDate}
+                    categories={post.data.categories}
+                />
+            </article>
+        ))
     }
 </Layout>

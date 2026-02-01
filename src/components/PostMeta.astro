@@ -1,0 +1,27 @@
+---
+const { pubDate, categories } = Astro.props;
+
+interface Props {
+    pubDate?: Date;
+    categories?: string[];
+}
+---
+
+{
+    (pubDate || categories) && (
+        <p class="flex flex-wrap gap-4 text-xs">
+            {pubDate && (
+                <span class="inline-flex gap-1 items-center">
+                    <time datetime={pubDate.toISOString()}>
+                        {pubDate.toLocaleDateString()}
+                    </time>
+                </span>
+            )}
+            {categories && (
+                <span class="inline-flex gap-1 items-center">
+                    {categories.join(", ")}
+                </span>
+            )}
+        </p>
+    )
+}

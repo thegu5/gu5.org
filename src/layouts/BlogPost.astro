@@ -1,9 +1,10 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import Layout from "./Layout.astro";
+import PostMeta from "../components/PostMeta.astro";
 
 interface Props {
-	post: CollectionEntry<"blog">;
+    post: CollectionEntry<"blog">;
 }
 
 const { post } = Astro.props;
@@ -18,7 +19,13 @@ const {
 ---
 
 <Layout title={title ?? "Blog post"} {description}>
-    <h1 class="text-3xl">{post.data.title}</h1>
     {image && <img src={image} alt={imageAlt} />}
-    <slot />
+    <div class="prose max-w-full wrap-break-word">
+        <h1>{post.data.title}</h1>
+        <PostMeta
+            pubDate={post.data.pubDate}
+            categories={post.data.categories}
+        />
+        <slot />
+    </div>
 </Layout>
