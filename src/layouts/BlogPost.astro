@@ -17,7 +17,7 @@ const {
 } = post.data;
 ---
 
-<Layout {title} {description}>
+<Layout title={title ?? "Blog post"} {description}>
     <h1 class="text-3xl">{post.data.title}</h1>
     {image && <img src={image} alt={imageAlt} />}
     <slot />
