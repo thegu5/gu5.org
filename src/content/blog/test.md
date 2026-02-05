@@ -6,3 +6,6 @@ categories: ["meta"]
 ---
 
 surely this works first try
+```js
+console.log("hiiii")
+``` 
