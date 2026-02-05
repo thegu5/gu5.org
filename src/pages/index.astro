@@ -1,18 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import NetscapeNow from "../assets/badges/netscape-now.gif";
 ---
 
 <Layout>
 	<!-- put an image here, like a pfp -->
-	<div class="prose max-w-full wrap-break-word">
+	<div class="prose dark:prose-invert max-w-full wrap-break-word">
 		<p>
 			Hi, I'm Gus - I do <strong>programming</strong>, <strong>sysadmin</strong>, insert other stuff here...
 		</p>
 		<p>
 			here is a second paragraph as an example, with a <a href="">link</a> for testing
 		</p>
+	</div>
+	<!-- setting the width and height of the badge img elements makes them load in better (bottom of the page doesn't shift around) -->
+	<div class="mt-8 flex justify-center gap-2 [&_img]:[image-rendering:pixelated] [&_img]:w-[88px] [&_img]:h-[31px]">
+		<img src={NetscapeNow.src} />
 	</div>
 </Layout>
