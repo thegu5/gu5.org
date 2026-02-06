@@ -30,7 +30,12 @@ const finalTitle = title ? `${title} - gu5.org` : "gu5.org";
 		<meta property="og:url" content={Astro.url.pathname} />
 
 		<link rel="sitemap" href="/sitemap-index.xml" />
-		<!-- TODO -->
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			title="Gus's Blog"
+			href={new URL("rss.xml", Astro.site)}
+		/>
 		<meta name="generator" content={Astro.generator} />
 	</head>
 	<body class="min-h-screen bg-gray-100 dark:bg-gray-900">
