@@ -1,11 +1,84 @@
 ---
 import Layout from "../layouts/Layout.astro";
 ---
-<Layout title="Stuff I use">
-    <article class="prose dark:prose-invert">
-        <h2>Stuff I use</h2>
+<Layout title="Uses">
+    <article class="prose dark:prose-invert max-w-full">
+        <h2>Software</h2>
+        <h3>Operating Systems</h3>
         <p>
-            blah blah
+            I run <a href="https://nixos.org/">NixOS</a> on my laptop as well as my servers.
+            The learning curve is... steep... and there are downsides, but the combination of up-to-date packages and it being difficult to break, etc is very nice.
+            I've tried various 'normal' Linux distros in the past, with <a href="https://fedoraproject.org">Fedora</a> having the best experience.
         </p>
+        <h3>Programs</h3>
+        <ul class="columns-1 md:columns-2">
+            <li>
+                <a href="https://apps.kde.org/akregator/">Akregator</a> (RSS reader)
+            </li>
+            <li>
+                <a href="https://cinny.im/">Cinny</a> (Matrix client)
+            </li>
+            <li>
+                <a href="https://direnv.net/">Direnv</a> (Shell environments)
+            </li>
+            <li>
+                <a href="https://firefox.com/">Firefox</a>
+            </li>
+            <li>
+                <a href="https://fishshell.com/">Fish</a> (Shell)
+            </li>
+            <li>
+                <a href="https://kdeconnect.kde.org/">KDE Connect</a> (Device communication)
+            </li>
+            <li>
+                <a href="https://kde.org/plasma-desktop/">KDE Plasma</a> (Desktop)
+            </li>
+            <li>
+                <a href="https://sw.kovidgoyal.net/kitty/">Kitty</a> (Terminal)
+            </li>
+            <li>
+                <a href="https://mpv.io/">mpv</a> (Media player)
+            </li>
+            <li>
+                <a href="https://nixos.org/">Nix</a>, along with <a href="https://nix-community.github.io/home-manager/">Home Manager</a> & <a href="https://github.com/nix-community/nh">nh</a>
+            </li>
+            <li>
+                <a href="https://signal.org/">Signal</a> (Messenger)
+            </li>
+            <li>
+                <a href="https://spotify.com/">Spotify</a> via <a href="https://github.com/Gerg-L/spicetify-nix">spicetify-nix</a>
+            </li>
+            <li>
+                <a href="https://steampowered.com/">Steam</a>
+            </li>
+            <li>
+                <a href="https://tailscale.com/">Tailscale</a> (Networking)
+            </li>
+            <li>
+                <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a> (Ad/Content blocker)
+            </li>
+            <li>
+                <a href="https://github.com/Vencord/Vesktop">Vesktop</a> (Discord messenger client)
+            </li>
+            <li>
+                <a href="https://vscodium.com/">VSCodium</a>, an OSS fork of <a href="https://code.visualstudio.com/">VSCode</a> (IDE)
+            </li>
+            <li>
+                <a href="https://wivrn.github.io/">WiVRn</a> (PCVR streaming)
+            </li>
+        </ul>
+        <h3>Services</h3>
+        <ul>
+            <li>
+                <a href="https://caddyserver.com/">Caddy</a>, a reverse proxy
+            </li>
+            <li>
+                <a href="https://continuwuity.org/">Continuwuity</a>, a <a href="https://matrix.org/">Matrix</a> homeserver (I'm <a href="https://matrix.to/#/@gus:gu5.org">@gus:gu5.org</a> - message me!)
+            </li>
+            <li>
+                <a href="https://prometheus.io/">Prometheus</a> and <a href="https://grafana.com/">Grafana</a> for monitoring (Actively looking for Grafana replacements - maybe <a href="https://perses.dev/">Perses</a>?)
+            </li>
+        </ul>
     </article>
+    <p class="prose dark:prose-invert text-sm mt-4">This page is inspired by <a href="https://devins.page/uses">https://devins.page/uses</a> :)</p>
 </Layout>
