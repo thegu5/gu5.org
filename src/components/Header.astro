@@ -1,12 +1,16 @@
 ---
+import { Image } from "astro:assets";
 import heliov from "../assets/heliov.jpg";
 ---
 
 <header>
-    <div
-        class="w-full h-[150px] bg-position-[center_25%] bg-cover bg-no-repeat dark:brightness-70"
-        style={`background-image: url(${heliov.src})`}
-    >
+    <!-- not good to have 900px duplicated -->
+    <img
+        src={heliov.src}
+        alt="A green-gray landscape"
+        class="w-full h-[150px] object-cover object-[center_25%] dark:brightness-70 bg-gray-400"
+        fetchpriority="high"
+    />
     </div>
     <nav>
         <ul class="flex justify-evenly items-center h-10 bg-green-200 dark:bg-teal-700 text-black dark:text-slate-100 bold font-medium *:*:p-2 *:hover:underline">
