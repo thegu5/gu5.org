@@ -7,13 +7,12 @@ categories: ["howto", "matrix", "nix"]
 
 Due to [current events](https://slate.com/technology/2026/02/discord-id-age-verification-online-safety.html),
 alternatives to Discord have been getting a lot of attention recently. As much as I would love for [Matrix](https://matrix.org/) to
-succeed here, it isn't ready for most non-technical users.
+succeed here, it isn't ready for most non-technical users. However, if you *are* a technical person...
 
 This guide assumes a few things:
 - You'll be running the server on a computer that's publically accessible over the internet
 - You have a domain that points to said machine
 - Said machine is running [NixOS](https://nixos.org/)
-
 
 Since "Matrix" is a protocol, there are several server implementations - with the most widely used (by far) being [Synapse](https://github.com/element-hq/synapse).
 It was the first implementation, and it's used to host the official `matrix.org` server - however, it has performance issues and eats a bunch of RAM and CPU.
