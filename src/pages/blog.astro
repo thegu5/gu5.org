@@ -3,29 +3,30 @@ import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import PostMeta from "../components/PostMeta.astro";
 
-const posts = await getCollection("blog");
-// idk
-// posts.sort((a, b) => b.data.pubDate - a.data.pubDate)
+const posts = (await getCollection("blog"))
+    .toSorted((a, b) => (b.data.pubDate?.valueOf() ?? 0) - (a.data.pubDate?.valueOf() ?? 0));
 ---
 
 <Layout title="Blog" description="A list of all the blog posts I've written.">
     <div class="prose dark:prose-invert mb-3">
         <a class="" href="/rss.xml">rss</a>
     </div>
-    {
-        posts.map((post) => (
-            <article class="border-2 border-blue-300 dark:border-blue-200 py-5 px-6 space-y-1 text-black dark:text-slate-100">
-                <h1 class="font-medium text-xl">
-                    <a href={`/blog/${post.slug}`} class="hover:underline">
-                        {post.data.title}
-                    </a>
-                </h1>
-                <p>{post.data.description}</p>
-                <PostMeta
-                    pubDate={post.data.pubDate}
-                    categories={post.data.categories}
-                />
-            </article>
-        ))
-    }
+    <div class="flex flex-col gap-4 sm:gap-6">
+        {
+            posts.map((post) => (
+                <article class="border-2 border-blue-300 dark:border-blue-200 py-5 px-6 space-y-1 text-black dark:text-slate-100">
+                    <h1 class="font-medium text-xl">
+                        <a href={`/blog/${post.slug}`} class="hover:underline">
+                            {post.data.title}
+                        </a>
+                    </h1>
+                    <p>{post.data.description}</p>
+                    <PostMeta
+                        pubDate={post.data.pubDate}
+                        categories={post.data.categories}
+                    />
+                </article>
+            ))
+        }
+    </div>
 </Layout>
