@@ -1,4 +1,7 @@
 ---
+import TagIcon from "~icons/lucide/tag";
+import CalendarIcon from "~icons/lucide/calendar";
+
 const { pubDate, categories } = Astro.props;
 
 interface Props {
@@ -12,6 +15,7 @@ interface Props {
         <p class="flex flex-wrap gap-4 text-xs">
             {pubDate && (
                 <span class="inline-flex gap-1 items-center">
+                    <CalendarIcon />
                     <time datetime={pubDate.toISOString()}>
                         {pubDate.toLocaleDateString()}
                     </time>
@@ -19,6 +23,7 @@ interface Props {
             )}
             {categories && (
                 <span class="inline-flex gap-1 items-center">
+                    <TagIcon />
                     {categories.join(", ")}
                 </span>
             )}

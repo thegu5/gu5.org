@@ -11,12 +11,14 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.15",
     "@astrojs/sitemap": "^3.7.0",
+    "@iconify-json/lucide": "^1.2.90",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.15",
     "astro-expressive-code": "^0.41.6",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18",
-    "ultrahtml": "^1.6.0"
+    "ultrahtml": "^1.6.0",
+    "unplugin-icons": "^23.0.1"
   }
 }
