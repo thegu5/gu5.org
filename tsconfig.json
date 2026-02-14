@@ -1,9 +1,5 @@
 {
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"],
-  "compilerOptions": {
-    // cursed
-    "types": ["unplugin-icons/types/vue"]
-  }
+  "exclude": ["dist"]
 }
