@@ -1,7 +1,7 @@
 ---
 title: Run Your Own Matrix Homeserver on NixOS
 description: The power of nix!
-pubDate: 2026-02-12
+pubDate: 2026-02-16
 categories: ["howto", "matrix", "nix"]
 ---
 
@@ -45,10 +45,6 @@ services.matrix-continuwuity = {
         url_preview_domain_explicit_allowlist = [ "github.com" ];
 
         log = "INFO,conduwuit_core::matrix::state_res=off"; # cleaner logs
-
-        # this lets us create our initial admin user.
-        # remove when you're done!
-        admin_execute = ["admin token issue --max-uses 1"];
     };
   };
 ```
@@ -118,10 +114,8 @@ Now that the server is up, running and working, you need a client to use to conn
 
 Now it's time to register your account! Your client will ask for a registration token, which is in the service logs:
 ```bash
-sudo journalctl -u continuwuity | grep "New registration token"
+sudo journalctl -u continuwuity | grep "registration token"
 ```
-
-For some final cleanup, make sure to remove `admin_execute` from your config, since you don't need it now.
 
 If you run into any issues, the [Continuwuity matrix space](https://matrix.to/#/#space:continuwuity.org) is super active and helpful. You might need to create an account on different server like `matrix.org` if your own isn't fully set up yet :)
 
