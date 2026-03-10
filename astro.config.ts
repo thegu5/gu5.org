@@ -12,7 +12,8 @@ export default defineConfig({
   },
 
   integrations: [sitemap(), expressiveCode({
-    themes: ["catppuccin-mocha", "catppuccin-latte"]
+    themes: ["catppuccin-mocha", "catppuccin-latte"],
+    useThemedSelectionColors: true
   })],
   vite: {
     plugins: [tailwindcss()],

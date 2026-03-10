@@ -2,7 +2,7 @@ import rss, { type RSSFeedItem } from '@astrojs/rss';
 import type { APIContext } from 'astro';
 // ehhh
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import { transform, walk } from 'ultrahtml';
 import sanitize from 'ultrahtml/transformers/sanitize';
 
@@ -17,7 +17,7 @@ export async function GET(context: APIContext) {
 
     const feedItems: RSSFeedItem[] = [];
     for (const post of posts) {
-        const { Content } = await post.render();
+        const { Content } = await render(post);
         const rawContent = await container.renderToString(Content);
         
         const content = await transform(rawContent.replace(/^<!DOCTYPE html>/, ""), [
@@ -35,7 +35,7 @@ export async function GET(context: APIContext) {
             sanitize({ dropElements: ["script", "style"] }),
         ]);
 
-        feedItems.push({ ...post.data, link: `/blog/${post.slug}`, content });
+        feedItems.push({ ...post.data, link: `/blog/${post.id}`, content });
     }
 
     return rss({
