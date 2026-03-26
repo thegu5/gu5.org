@@ -7,7 +7,7 @@ categories: ["howto", "matrix", "nix"]
 
 Due to [current events](https://slate.com/technology/2026/02/discord-id-age-verification-online-safety.html),
 alternatives to Discord have been getting a lot of attention recently. As much as I would love for [Matrix](https://matrix.org/) to
-succeed here, it isn't ready for most non-technical users. However, if you *are* a technical person...
+succeed here, it isn't ready for most non-technical users. However, if you want to tinker...
 
 This guide assumes a few things:
 - You'll be running the server on a computer that's publically accessible over the internet
