@@ -1,15 +1,16 @@
 ---
-import { Image } from "astro:assets";
 import heliov from "../assets/heliov.webp";
 ---
 
 <header>
-    <!-- not good to have 900px duplicated -->
     <img
         src={heliov.src}
         alt=""
-        class="w-full h-[150px] object-cover dark:brightness-70 bg-gray-400 indent-[100%] whitespace-nowrap overflow-hidden"
+        width={900}
+        height={150}
+        class="object-cover dark:brightness-70 bg-gray-400 indent-[100%] whitespace-nowrap overflow-hidden"
         fetchpriority="high"
+        
     />
     </div>
     <nav>
