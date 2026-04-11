@@ -1,9 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
 import WithAstro from "../assets/badges/astro.png";
 import Caddy from "../assets/badges/caddy.png";
-import CorruObserver from "../assets/badges/corru-observer.gif"
+import CorruObserver from "../assets/badges/corru-observer.gif";
 import NetscapeNow from "../assets/badges/netscape-now.gif";
 import NixOS from "../assets/badges/nixos.png";
 import UBlockOrigin from "../assets/badges/ublockorigin.png";
@@ -12,49 +12,44 @@ import UBlockOrigin from "../assets/badges/ublockorigin.png";
 <Layout title="home" description="Hi, I'm Gus! I do programming, sysadmin, and a bunch of other stuff.">
 	<!-- put an image here, like a pfp -->
 	<div class="prose dark:prose-invert max-w-full wrap-break-word">
-		<p>
-			Hi, I'm Gus - I do <strong>programming</strong>, <strong>sysadmin</strong>, and a bunch of other stuff.
-		</p>
-		<p>
-			I've worked on a lot of different projects. Here are some of the things I'm proud of:
-		</p>
+		<p>Hi, I'm Gus - I do <strong>programming</strong>, <strong>sysadmin</strong>, and a bunch of other stuff.</p>
+		<p>I've worked on a lot of different projects. Here are some of the things I'm proud of:</p>
 		<ul>
 			<li>
-				<a href="https://github.com/thegu5/personal-site">This site</a>,
-				built with <a href="https://astro.build/">Astro</a> and <a href="https://tailwindcss.com/">TailwindCSS</a>
+				<a href="https://github.com/thegu5/personal-site">This site</a>, built with
+				<a href="https://astro.build/">Astro</a>
+				and
+				<a href="https://tailwindcss.com/">TailwindCSS</a>
 				(you're reading it right now!)
 			</li>
 			<li>
 				I contribute to and maintain
-				<a href="https://search.nixos.org/packages?channel=unstable&buckets={%22package_attr_set%22%3A[]%2C%22package_license_set%22%3A[]%2C%22package_maintainers_set%22%3A[%22Gus%22]%2C%22package_teams_set%22%3A[]%2C%22package_platforms%22%3A[]}&query=*">
-					several packages</a>
+				<a
+					href="https://search.nixos.org/packages?channel=unstable&buckets={%22package_attr_set%22%3A[]%2C%22package_license_set%22%3A[]%2C%22package_maintainers_set%22%3A[%22Gus%22]%2C%22package_teams_set%22%3A[]%2C%22package_platforms%22%3A[]}&query=*"
+				>
+					several packages
+				</a>
 				in <a href="https://github.com/NixOS/nixpkgs">Nixpkgs</a>
 			</li>
 			<li>
-				I contributed <a href="https://webassembly.org/">WebAssembly</a> debug section generation support
-				to <a href="https://github.com/SamboyCoding/Cpp2IL">Cpp2IL</a>, a tool used for modding and
-				adding extra content to games made with the <a href="https://unity.com/">Unity</a> engine.
-				The pull request can be found <a href="https://github.com/SamboyCoding/Cpp2IL/pull/388">here</a>
+				I contributed <a href="https://webassembly.org/">WebAssembly</a> debug section generation support to
+				<a href="https://github.com/SamboyCoding/Cpp2IL">Cpp2IL</a>, a tool used for modding and adding extra content to
+				games made with the <a href="https://unity.com/">Unity</a> engine. The pull request can be found
+				<a href="https://github.com/SamboyCoding/Cpp2IL/pull/388">here</a>
 			</li>
 		</ul>
 	</div>
 	<!-- setting the width and height of the badge img elements makes them load in better (bottom of the page doesn't shift around) -->
-	<div class="mt-8 flex flex-wrap justify-center gap-2 [&_img]:[image-rendering:pixelated] [&_img]:w-[88px] [&_img]:h-[31px]">
+	<div
+		class="mt-8 flex flex-wrap justify-center gap-2 [&_img]:[image-rendering:pixelated] [&_img]:w-[88px] [&_img]:h-[31px]"
+	>
 		<img src={NetscapeNow.src} alt="Netscape Now! (3.0)" />
-		<a href="https://astro.build">
-			<img src={WithAstro.src} alt="Astro" />
-		</a>
-		<a href="https://caddyserver.com/">
-			<img src={Caddy.src} alt="Caddy" />
-		</a>
-		<a href="https://nixos.org/">
-			<img src={NixOS.src} alt="Powered by NixOS" />
-		</a>
+		<a href="https://astro.build"> <img src={WithAstro.src} alt="Astro" /> </a>
+		<a href="https://caddyserver.com/"> <img src={Caddy.src} alt="Caddy" /> </a>
+		<a href="https://nixos.org/"> <img src={NixOS.src} alt="Powered by NixOS" /> </a>
 		<a href="https://corru.observer/">
 			<img src={CorruObserver.src} alt="A yellow barcode labeled 'corru.observer'" />
 		</a>
-		<a href="https://ublockorigin.com/">
-			<img src={UBlockOrigin.src} alt="uBlock Origin Now!" />
-		</a>
+		<a href="https://ublockorigin.com/"> <img src={UBlockOrigin.src} alt="uBlock Origin Now!" /> </a>
 	</div>
 </Layout>

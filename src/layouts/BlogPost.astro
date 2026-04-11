@@ -4,27 +4,17 @@ import Layout from "./Layout.astro";
 import PostMeta from "../components/PostMeta.astro";
 
 interface Props {
-    post: CollectionEntry<"blog">;
+	post: CollectionEntry<"blog">;
 }
 
-const {
-    title,
-    description = "",
-    pubDate,
-    categories,
-    image,
-    imageAlt = "",
-} = Astro.props.post.data;
+const { title, description = "", pubDate, categories, image, imageAlt = "" } = Astro.props.post.data;
 ---
 
 <Layout title={title ?? "Blog post"} {description}>
-    {image && <img src={image} alt={imageAlt} />}
-    <div class="prose dark:prose-invert max-w-full wrap-break-word">
-        <h1>{title}</h1>
-        <PostMeta
-            pubDate={pubDate}
-            categories={categories}
-        />
-        <slot />
-    </div>
+	{image && <img src={image} alt={imageAlt} />}
+	<div class="prose dark:prose-invert max-w-full wrap-break-word">
+		<h1>{title}</h1>
+		<PostMeta pubDate={pubDate} categories={categories} />
+		<slot />
+	</div>
 </Layout>
