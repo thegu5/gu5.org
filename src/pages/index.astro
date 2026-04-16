@@ -1,19 +1,32 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+import SimpleIconsGithub from "~icons/simple-icons/github";
+import SimpleIconsBluesky from "~icons/simple-icons/bluesky";
+import SimpleIconsMatrix from "~icons/simple-icons/matrix";
+import SimpleIconsDiscord from "~icons/simple-icons/discord";
+
 import WithAstro from "../assets/badges/astro.png";
 import Caddy from "../assets/badges/caddy.png";
 import CorruObserver from "../assets/badges/corru-observer.gif";
 import NetscapeNow from "../assets/badges/netscape-now.gif";
 import NixOS from "../assets/badges/nixos.png";
 import UBlockOrigin from "../assets/badges/ublockorigin.png";
+import IconLink from "../components/IconLink.astro";
 ---
 
-<Layout title="home" description="Hi, I'm Gus! I do programming, sysadmin, and a bunch of other stuff.">
+<Layout title="home" description="Hi, I'm Gus! I do programming and sysadmin, among other things">
 	<!-- put an image here, like a pfp -->
 	<div class="prose dark:prose-invert max-w-full wrap-break-word">
-		<p>Hi, I'm Gus - I do <strong>programming</strong>, <strong>sysadmin</strong>, and a bunch of other stuff.</p>
-		<p>I've worked on a lot of different projects. Here are some of the things I'm proud of:</p>
+		<p>
+			Hi, I'm Gus - I do <strong>programming</strong> (especially <abbr title="well, ECMAScript...">JavaScript</abbr> &
+			developer tooling) and <strong>sysadmin</strong> (Linux), among other things.
+		</p>
+
+		<p>
+			Most projects I've worked on are open source and can be found on
+			<a href="https://github.com/thegu5">GitHub</a>. Here's some stuff I'm proud of:
+		</p>
 		<ul>
 			<li>
 				<a href="https://github.com/thegu5/personal-site">This site</a>, built with
@@ -23,7 +36,7 @@ import UBlockOrigin from "../assets/badges/ublockorigin.png";
 				(you're reading it right now!)
 			</li>
 			<li>
-				I contribute to and maintain
+				Contributing to and maintaining
 				<a
 					href="https://search.nixos.org/packages?channel=unstable&buckets={%22package_attr_set%22%3A[]%2C%22package_license_set%22%3A[]%2C%22package_maintainers_set%22%3A[%22Gus%22]%2C%22package_teams_set%22%3A[]%2C%22package_platforms%22%3A[]}&query=*"
 				>
@@ -32,16 +45,26 @@ import UBlockOrigin from "../assets/badges/ublockorigin.png";
 				in <a href="https://github.com/NixOS/nixpkgs">Nixpkgs</a>
 			</li>
 			<li>
-				I contributed <a href="https://webassembly.org/">WebAssembly</a> debug section generation support to
-				<a href="https://github.com/SamboyCoding/Cpp2IL">Cpp2IL</a>, a tool used for modding and adding extra content to
-				games made with the <a href="https://unity.com/">Unity</a> engine. The pull request can be found
-				<a href="https://github.com/SamboyCoding/Cpp2IL/pull/388">here</a>
+				<a href="https://github.com/SamboyCoding/Cpp2IL/pull/388">Contributing</a> WebAssembly debug section generation
+				support to <a href="https://github.com/SamboyCoding/Cpp2IL">Cpp2IL</a>, a tool used for modding and adding extra
+				content to games made with the Unity engine
+			</li>
+			<li>
+				Hacking together <a href="https://www.youtube.com/watch?v=GYSU5xXtVCE">VR support</a> for an old first person
+				shooter browser game
 			</li>
 		</ul>
+		<p class="flex flex-wrap mt-0">
+			You can find me on
+			<IconLink href="https://github.com/thegu5" icon={SimpleIconsGithub}>GitHub</IconLink>,
+			<IconLink href="https://bsky.app/profile/gu5.org" icon={SimpleIconsBluesky}>Bluesky</IconLink>,
+			<IconLink href="https://matrix.to/#/@gus:gu5.org" icon={SimpleIconsMatrix}>Matrix</IconLink>, and
+			<IconLink href="https://discord.com/users/639966783213928448" icon={SimpleIconsDiscord}>Discord</IconLink>.
+		</p>
 	</div>
 	<!-- setting the width and height of the badge img elements makes them load in better (bottom of the page doesn't shift around) -->
 	<div
-		class="mt-8 flex flex-wrap justify-center gap-2 [&_img]:[image-rendering:pixelated] [&_img]:w-[88px] [&_img]:h-[31px]"
+		class="mt-10 flex flex-wrap justify-center gap-2 [&_img]:[image-rendering:pixelated] [&_img]:w-[88px] [&_img]:h-[31px]"
 	>
 		<img src={NetscapeNow.src} alt="Netscape Now! (3.0)" />
 		<a href="https://astro.build"> <img src={WithAstro.src} alt="Astro" /> </a>

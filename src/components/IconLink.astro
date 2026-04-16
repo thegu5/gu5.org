@@ -1,0 +1,14 @@
+---
+interface Props {
+	href: string;
+	icon?: (props: astroHTML.JSX.SVGAttributes) => unknown;
+	class?: string;
+}
+
+const { href, icon: Icon, class: className, ...rest } = Astro.props;
+---
+
+<a href={href} class:list={["inline-flex items-center", className]} {...rest}>
+	{Icon && <Icon class="ml-1.5 mr-1.5" />}
+	<slot />
+</a>
