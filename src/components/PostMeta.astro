@@ -12,7 +12,7 @@ interface Props {
 			{pubDate && (
 				<span class="inline-flex gap-1 items-center">
 					<time datetime={pubDate.toISOString()}>
-						{pubDate.toLocaleDateString()}
+						{pubDate.toLocaleDateString("en-US", { timeZone: "UTC" })}
 					</time>
 				</span>
 			)}
