@@ -1,14 +1,18 @@
 ---
-const { pubDate, categories } = Astro.props;
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
-	pubDate?: Date;
-	categories?: string[];
+	post: CollectionEntry<"blog">;
 }
+
+const {
+	id,
+	data: { pubDate, categories },
+} = Astro.props.post;
 ---
 
 {(pubDate || categories) && (
-		<p class="flex flex-wrap gap-4 text-xs">
+		<p class="flex flex-wrap gap-4 text-xs" style={`view-transition-name: ${id}-meta`}>
 			{pubDate && (
 				<span class="inline-flex gap-1 items-center">
 					<time datetime={pubDate.toISOString()}>

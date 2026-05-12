@@ -13,15 +13,12 @@ const posts = (await getCollection("blog")).toSorted(
 		{posts.map((post) => (
 				<article class="border-2 border-gray-500 dark:border-gray-300 py-5 px-6 space-y-1 text-black dark:text-slate-100">
 					<h1 class="font-medium text-xl">
-						<a href={`/blog/${post.id}`} class="hover:underline">
+						<a href={`/blog/${post.id}`} class="hover:underline" style={`view-transition-name: ${post.id}`}>
 							{post.data.title}
 						</a>
 					</h1>
 					<p>{post.data.description}</p>
-					<PostMeta
-						pubDate={post.data.pubDate}
-						categories={post.data.categories}
-					/>
+					<PostMeta {post} />
 				</article>
 			))}
 	</div>

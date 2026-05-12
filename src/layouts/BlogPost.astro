@@ -6,15 +6,18 @@ import PostMeta from "../components/PostMeta.astro";
 interface Props {
 	post: CollectionEntry<"blog">;
 }
-
-const { title, description = "", pubDate, categories, image, imageAlt = "" } = Astro.props.post.data;
+const { post } = Astro.props;
+const {
+	id,
+	data: { title, description = "", image, imageAlt = "" },
+} = post;
 ---
 
 <Layout title={title ?? "Blog post"} {description}>
 	{image && <img src={image} alt={imageAlt} />}
 	<div class="prose dark:prose-invert max-w-full wrap-break-word">
-		<h1>{title}</h1>
-		<PostMeta pubDate={pubDate} categories={categories} />
+		<h1 style={`view-transition-name: ${id}`}>{title}</h1>
+		<PostMeta {post} />
 		<slot />
 	</div>
 </Layout>
