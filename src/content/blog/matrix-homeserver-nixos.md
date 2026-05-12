@@ -1,5 +1,5 @@
 ---
-title: Run Your Own Matrix Homeserver on NixOS
+title: Run your own Matrix homeserver on NixOS
 description: The power of nix!
 pubDate: 2026-02-16
 categories: ["howto", "matrix", "nix"]
