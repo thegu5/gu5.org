@@ -11,17 +11,17 @@
 	"dependencies": {
 		"@astrojs/rss": "^4.0.18",
 		"@astrojs/sitemap": "^3.7.2",
-		"@iconify-json/simple-icons": "^1.2.78",
+		"@iconify-json/simple-icons": "^1.2.81",
 		"@tailwindcss/typography": "^0.5.19",
-		"@tailwindcss/vite": "^4.2.2",
-		"astro": "^6.1.5",
-		"astro-expressive-code": "^0.41.7",
+		"@tailwindcss/vite": "^4.3.0",
+		"astro": "^6.3.1",
+		"astro-expressive-code": "^0.42.0",
 		"sharp": "^0.34.5",
-		"tailwindcss": "^4.2.2",
+		"tailwindcss": "^4.3.0",
 		"ultrahtml": "^1.6.0",
 		"unplugin-icons": "^23.0.1"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.4.11"
+		"@biomejs/biome": "2.4.15"
 	}
 }
