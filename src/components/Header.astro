@@ -1,15 +1,17 @@
 ---
+import { Picture } from "astro:assets";
 import heliov from "../assets/heliov.webp";
 ---
 
 <header>
-	<img
-		src={heliov.src}
+	<Picture
+		src={heliov}
 		alt=""
-		width={900}
-		height={150}
-		class="object-cover dark:brightness-70 bg-gray-400 indent-[100%] whitespace-nowrap overflow-hidden"
+		class="dark:brightness-70 bg-gray-400 indent-[100%] whitespace-nowrap overflow-hidden"
 		fetchpriority="high"
+		quality="high"
+		layout="constrained"
+		formats={["avif", "webp"]}
 	/>
 	<nav>
 		<ul
