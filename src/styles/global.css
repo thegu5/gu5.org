@@ -14,7 +14,18 @@
 /* #endregion */
 
 @media (prefers-reduced-motion: no-preference) {
-  @view-transition {
-    navigation: auto;
-  }
+	@view-transition {
+		navigation: auto;
+	}
+}
+
+/* useful for debugging */
+/* :root::view-transition-group(*) {
+	animation-duration: 10s;
+} */
+
+::view-transition-old(*),
+::view-transition-new(*) {
+	object-fit: none;
+	object-position: left top;
 }
