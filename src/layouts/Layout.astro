@@ -21,8 +21,9 @@ const finalTitle = title ? `${title} - gu5.org` : "gu5.org";
 		<meta name="author" content="Gus" />
 		<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
 
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+		<!-- <link rel="icon" href="/favicon.ico" /> -->
+		<link rel="icon" href="data:," />
 
 		<meta property="og:title" content={finalTitle} />
 		<meta property="og:description" content={description} />
@@ -32,11 +33,25 @@ const finalTitle = title ? `${title} - gu5.org` : "gu5.org";
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<link rel="alternate" type="application/rss+xml" title="Gus's Blog" href={new URL("rss.xml", Astro.site)} />
 		<meta name="generator" content={Astro.generator} />
+
+		<link rel="expect" href="#main" blocking="render" />
+		<script type="speculationrules" is:inline>
+  			{
+    			"prerender": [{
+    				"where": { "href_matches": "/*" },
+      				"eagerness": "moderate"
+    			}],
+    			"prefetch": [{
+      				"where": { "not": { "href_matches": "/*" } },
+      				"eagerness": "moderate"
+    			}]
+  			}
+		</script>
 	</head>
 	<body class="min-h-screen bg-gray-100 dark:bg-gray-900">
 		<div class="max-w-4xl mx-auto bg-slate-200 dark:bg-slate-700">
 			<Header />
-			<main class="p-5"><slot /></main>
+			<main id="main" class="p-5"><slot /></main>
 		</div>
 	</body>
 </html>
