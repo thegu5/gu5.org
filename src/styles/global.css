@@ -34,3 +34,7 @@
 ::view-transition-new(site-header) {
 	animation: none;
 }
+
+html {
+	scrollbar-gutter: stable both-edges;
+}
