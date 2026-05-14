@@ -10,9 +10,9 @@
 .footnotes {
 	@apply text-sm border-t-2 border-gray-400;
 }
-
 /* #endregion */
 
+/* #region view transitions */
 @media (prefers-reduced-motion: no-preference) {
 	@view-transition {
 		navigation: auto;
@@ -34,6 +34,7 @@
 ::view-transition-new(site-header) {
 	animation: none;
 }
+/* #endregion */
 
 html {
 	scrollbar-gutter: stable both-edges;
