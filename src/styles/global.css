@@ -29,3 +29,8 @@
 	object-fit: none;
 	object-position: left top;
 }
+
+::view-transition-old(site-header),
+::view-transition-new(site-header) {
+	animation: none;
+}
