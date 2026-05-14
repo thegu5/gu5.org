@@ -8,10 +8,6 @@ import icons from "unplugin-icons/vite";
 export default defineConfig({
 	site: "https://gu5.org",
 
-	prefetch: {
-		prefetchAll: true,
-	},
-
 	integrations: [
 		sitemap(),
 		expressiveCode({
