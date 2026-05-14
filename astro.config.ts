@@ -13,6 +13,8 @@ export default defineConfig({
 		expressiveCode({
 			themes: ["catppuccin-mocha", "catppuccin-latte"],
 			useThemedSelectionColors: true,
+			// reduces time until full pages are rendered
+			emitExternalStylesheet: false
 		}),
 	],
 	vite: {
