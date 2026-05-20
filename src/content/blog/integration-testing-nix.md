@@ -5,7 +5,7 @@ pubDate: 2026-05-20
 categories: ["post", "testing", "nix"]
 ---
 
-I've recently been working on a TypeScript client library ([neoprom](https://github.com/thegu5/neoprom) for [Prometheus](https://prometheus.io)), which makes it easier for developers to instrument code for gathering metrics.
+I've recently been working on a TypeScript client library ([neoprom](https://github.com/thegu5/neoprom)) for [Prometheus](https://prometheus.io), which makes it easier for developers to instrument code for gathering metrics.
 As part of this project, I want to have good tests that both cover the library's internal logic, as well as make sure it works properly with Prometheus.
 So... what are the options?
 
