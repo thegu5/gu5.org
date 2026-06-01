@@ -1,6 +1,7 @@
 {
 	"name": "personal-site",
 	"version": "0.0.1",
+	"private": true,
 	"type": "module",
 	"scripts": {
 		"dev": "astro dev",
@@ -9,13 +10,14 @@
 		"astro": "astro"
 	},
 	"dependencies": {
+		"@astrojs/markdown-satteri": "^0.2.1",
 		"@astrojs/rss": "^4.0.18",
-		"@astrojs/sitemap": "^3.7.2",
-		"@iconify-json/simple-icons": "^1.2.81",
+		"@astrojs/sitemap": "^3.7.3",
+		"@iconify-json/simple-icons": "^1.2.84",
 		"@tailwindcss/typography": "^0.5.19",
 		"@tailwindcss/vite": "^4.3.0",
-		"astro": "^6.3.1",
-		"astro-expressive-code": "^0.42.0",
+		"astro": "^6.4.2",
+		"satteri-expressive-code": "^0.1.8",
 		"sharp": "^0.34.5",
 		"tailwindcss": "^4.3.0",
 		"ultrahtml": "^1.6.0",
@@ -23,5 +25,6 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.4.15"
-	}
+	},
+	"packageManager": "pnpm@11.5.0"
 }
