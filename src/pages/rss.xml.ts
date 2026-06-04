@@ -33,7 +33,7 @@ export async function GET(context: APIContext) {
 				});
 				return node;
 			},
-			sanitize({ dropElements: ["script", "style"] }),
+			sanitize({ dropElements: ["script"] }),
 		]);
 
 		feedItems.push({ ...post.data, link: `/blog/${post.id}`, content });
