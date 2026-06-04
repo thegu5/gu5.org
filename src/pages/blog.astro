@@ -10,6 +10,7 @@ const posts = (await getCollection("blog")).toSorted(
 
 <Layout title="Blog" description="A list of all the blog posts I've written.">
 	<div class="flex flex-col gap-4 sm:gap-6">
+		<div class="prose dark:prose-invert -mb-2">There's also an <a href="/rss.xml">RSS feed</a>!</div>
 		{posts.map((post) => (
 				<article class="border-2 border-gray-500 dark:border-gray-300 py-5 px-6 space-y-1 text-black dark:text-slate-100">
 					<h1 class="font-medium text-xl">
