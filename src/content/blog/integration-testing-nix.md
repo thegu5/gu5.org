@@ -78,7 +78,7 @@ pkgs.testers.runNixOSTest {
 ```
 
 The specific command to run the test depends on the project's setup.
-You can look at [my non-flake setup](https://github.com/thegu5/neoprom/blob/main/default.nix) for inspiration, or take a peek at Jacek Galowicz's work below (Nixcademy).
+You can look at [my non-flake setup](https://github.com/thegu5/neoprom/blob/main/package.json) for inspiration, or take a peek at Jacek Galowicz's work below (Nixcademy).
 
 Thanks for reading :)
 
