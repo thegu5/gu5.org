@@ -62,9 +62,14 @@ import IconLink from "../components/IconLink.astro";
 			<IconLink href="https://discord.com/users/639966783213928448" icon={SimpleIconsDiscord}>Discord</IconLink>.
 		</p>
 	</div>
+	<div class="flex justify-center mt-5 gap-2 text-blue-800 dark:text-blue-200 underline">
+		<a href="https://nixwebr.ing/prev/gus">&lt;&lt;</a>
+		<a href="https://nixwebr.ing">nix webring</a>
+		<a href="https://nixwebr.ing/next/gus">&gt;&gt;</a>
+	</div>
 	<!-- setting the width and height of the badge img elements makes them load in better (bottom of the page doesn't shift around) -->
 	<div
-		class="mt-10 flex flex-wrap justify-center gap-2 [&_img]:[image-rendering:pixelated] [&_img]:w-[88px] [&_img]:h-[31px]"
+		class="mt-5 flex flex-wrap justify-center gap-2 [&_img]:[image-rendering:pixelated] [&_img]:w-[88px] [&_img]:h-[31px]"
 	>
 		<img src={NetscapeNow.src} alt="Netscape Now! (3.0)" />
 		<a href="https://astro.build"> <img src={WithAstro.src} alt="Astro" /> </a>
