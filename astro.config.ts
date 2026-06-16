@@ -1,4 +1,3 @@
-import { satteri } from "@astrojs/markdown-satteri";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
@@ -21,9 +20,6 @@ export default defineConfig({
 
 	markdown: {
 		syntaxHighlight: false, // disable shiki
-		processor: satteri({
-			features: { directive: true },
-		}),
 	},
 
 	vite: {
