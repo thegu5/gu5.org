@@ -34,6 +34,18 @@
 ::view-transition-new(site-header) {
 	animation: none;
 }
+
+/* https://vtbag.dev/tips/pointer/ */
+:active-view-transition {
+	cursor: pointer;
+}
+
+/* https://vtbag.dev/tips/over-exposure/#reusing-the-user-agent-stylesheet */
+/* not sure if this actually helps */
+::view-transition-new(img),
+::view-transition-old(img) {
+  animation-timing-function: linear;
+}
 /* #endregion */
 
 html {
