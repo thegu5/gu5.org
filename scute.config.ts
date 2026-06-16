@@ -7,7 +7,7 @@ export default defineConfig({
 			collectionName: "blog",
 			record: {
 				$type: "site.standard.publication",
-				name: "Gus's site",
+				name: "Gus's blog",
 				url: "https://gu5.org",
 				basicTheme: {
 					$type: "site.standard.theme.basic",
