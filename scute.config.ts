@@ -5,6 +5,7 @@ export default defineConfig({
 	publications: [
 		{
 			collectionName: "blog",
+			contentType: "markdown",
 			record: {
 				$type: "site.standard.publication",
 				name: "Gus's blog",
