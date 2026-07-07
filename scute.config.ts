@@ -5,6 +5,7 @@ export default defineConfig({
 	publications: [
 		{
 			collectionName: "blog",
+			tid: "3mpzkkds4xceb",
 			contentType: "markdown",
 			record: {
 				$type: "site.standard.publication",
@@ -13,9 +14,9 @@ export default defineConfig({
 				basicTheme: {
 					$type: "site.standard.theme.basic",
 					accent: {
-						r: 255,
-						g: 255,
-						b: 255,
+						r: 0,
+						g: 120,
+						b: 111,
 						$type: "site.standard.theme.color#rgb",
 					},
 					background: {
@@ -32,9 +33,9 @@ export default defineConfig({
 					},
 					accentForeground: {
 						$type: "site.standard.theme.color#rgb",
-						r: 0,
-						g: 0,
-						b: 0,
+						r: 255,
+						g: 255,
+						b: 255,
 					},
 				},
 				preferences: {
