@@ -44,7 +44,7 @@
 /* not sure if this actually helps */
 ::view-transition-new(img),
 ::view-transition-old(img) {
-  animation-timing-function: linear;
+	animation-timing-function: linear;
 }
 /* #endregion */
 
